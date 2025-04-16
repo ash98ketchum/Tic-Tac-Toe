@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        
+        <div class="turn-indicator">
+            <span class="player-symbol player-x active">X</span>
+            <span>vs</span>
+            <span class="player-symbol player-o">O</span>
+        </div>
+        
+        <div class="modal" id="name-modal">
+            <div class="modal-content">
+            <h2>Enter Player Names</h2>
+            <label>
+                Player X: <input type="text" id="playerX-name" placeholder="Player X">
+            </label>
+            <br>
+            <label>
+                Player O: <input type="text" id="playerO-name" placeholder="Player O">
+            </label>
+            <br>
+            <button id="start-game">Start Game</button>
+            </div>
+        </div>
+        <!-- Win Modal: Shown when a player wins -->
+        <div class="modal" id="win-modal">
+            <div class="modal-content">
+            <h2 id="win-message">Player X wins!</h2>
+            <button id="play-again">Play Again</button>
+            <button id="exit-game">Exit</button>
+            </div>
+        </div>
+        
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+            <div class="win-line" id="win-line"></div>
+        </div>
+        
+        <div class="message" id="message"></div>
+        
+        <div class="buttons">
+            <button id="restart-btn">Restart Game</button>
+            <button id="settings-btn">Settings</button>
+            <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+        </div>
+        
+        <div class="settings-panel" id="settings-panel">
+            <div class="settings-group">
+                <label>Choose Player X Color:</label>
+                <div class="color-options" id="x-colors">
+                    <div class="color-option selected" style="background-color: #7c4dff;" data-color="#7c4dff"></div>
+                    <div class="color-option" style="background-color: #2196f3;" data-color="#2196f3"></div>
+                    <div class="color-option" style="background-color: #4caf50;" data-color="#4caf50"></div>
+                    <div class="color-option" style="background-color: #ff9800;" data-color="#ff9800"></div>
+                </div>
+            </div>
+            <div class="settings-group">
+                <label>Choose Player O Color:</label>
+                <div class="color-options" id="o-colors">
+                    <div class="color-option selected" style="background-color: #ff5252;" data-color="#ff5252"></div>
+                    <div class="color-option" style="background-color: #e91e63;" data-color="#e91e63"></div>
+                    <div class="color-option" style="background-color: #9c27b0;" data-color="#9c27b0"></div>
+                    <div class="color-option" style="background-color: #ff9800;" data-color="#ff9800"></div>
+                </div>
+            </div>
+            <button id="apply-settings">Apply Settings</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
